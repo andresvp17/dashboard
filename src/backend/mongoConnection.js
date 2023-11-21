@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-const PASSWORD = '0bRizRKgFCDcNLPt'
+const PASSWORD = import.meta.env.VITE_MONGO_PASSWORD
 
 const connectToDatabase = () => {
   mongoose.connect(`mongodb+srv://andresvp257:${PASSWORD}@cluster0.6trfqpo.mongodb.net/dashboard?retryWrites=true&w=majority`, {
