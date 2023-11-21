@@ -33,7 +33,7 @@ const useUsers = () => {
         console.error(err)
       })
 
-    getUsers()
+    await getUsers()
       .then(response => {
         setUsers(response)
         userPosted()
@@ -43,7 +43,7 @@ const useUsers = () => {
   const patchUserAndUpdate = async ({ id, body }: { id: string, body: FormFields }) => {
     await patchUser({ id, body })
 
-    getUsers()
+    await getUsers()
       .then(response => {
         setUsers(response)
       })

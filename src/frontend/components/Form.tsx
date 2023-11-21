@@ -14,8 +14,8 @@ export const Form: FC<Props> = ({ handlePostAndUpdate }) => {
     event.preventDefault()
     const formData = new FormData(event.currentTarget)
     const { username, email, name, city, country } = Object.fromEntries(formData)
-
-    if (emailRegex({ email }) || usernameRegex({ username })) return warningMessage()
+    
+    if (!(emailRegex({ email }) || usernameRegex({ username }))) return warningMessage()
     
     handlePostAndUpdate({ username, email, name, city, country })
   }

@@ -1,11 +1,7 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { BrowserRouter } from 'react-router-dom'
 import { cleanup, render, screen, waitFor } from '@testing-library/react'
 import App from '../frontend/App'
-
-vi.mock('../services/userServices.ts', () => ({
-  
-}))
 
 describe('dashboard', () => {
   beforeEach(() => {

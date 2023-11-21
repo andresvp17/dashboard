@@ -17,7 +17,7 @@ const Modal: FC<Props> = ({ handlePatchAndUpdate }) => {
     const formData = new FormData(event.currentTarget)
     const { city, country, email, name, username } = Object.fromEntries(formData);
 
-    if (emailRegex({ email }) || usernameRegex({ username })) {      
+    if (!(emailRegex({ email }) || usernameRegex({ username }))) {      
       return warningMessage()
     }
     
@@ -80,7 +80,7 @@ export const ModalForm: FC<Props> = ({  handlePatchAndUpdate }) => {
 
   return (
     <section>
-      {createPortal( <Modal handlePatchAndUpdate={handlePatchAndUpdate} />, modalRoot)}
+      {createPortal(<Modal handlePatchAndUpdate={handlePatchAndUpdate} />, modalRoot)}
     </section>
   )
 }

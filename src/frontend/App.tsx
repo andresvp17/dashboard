@@ -1,5 +1,4 @@
 import { Home } from './routes/Home'
-//import { Login } from './routes/Login'
 import { Routes, Route } from 'react-router-dom'
 import { ModalForm } from './components/Modal'
 import useUsers from './hooks/useUsers'
